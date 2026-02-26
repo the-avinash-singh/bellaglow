@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     url:"www.bellaglow.com",
     description:"Buy your costmatics at lowest price possible",
     images:[
-      {url:"/web-app-manifest-192x192", alt:"bellaglow logo"},
-      "/web-app-manifest-512x512"
+      {url:"https://bellaglo.netlify.app/web-app-manifest-192x192", alt:"bellaglow logo"},
+      {url:"https://bellaglo.netlify.app/web-app-manifest-512x512"}
     ]
   }
 };
