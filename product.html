@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bella Glow Cosmetics - Product Catalog</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#dd3c57",
+                        "background-light": "#f8f6f6",
+                        "background-dark": "#201214",
+                    },
+                    fontFamily: {
+                        "display": ["Noto Serif", "serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for sidebar */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#171212] dark:text-gray-100 font-display transition-colors duration-200">
+<!-- Header -->
+<header class="sticky top-0 z-50 w-full bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-b border-[#e6e0e0] dark:border-[#3a2a2c]">
+<div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<!-- Mobile Menu Button -->
+<button aria-label="Menu" class="lg:hidden p-2 text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Search (Left on Desktop) -->
+<div class="hidden lg:flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-xs group">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</span>
+<input class="w-full bg-transparent border-b border-gray-300 dark:border-gray-700 py-2 pl-10 pr-4 text-sm focus:outline-none focus:border-primary transition-colors placeholder:text-gray-400 dark:bg-transparent dark:text-white" placeholder="Search..." type="text"/>
+</div>
+</div>
+<!-- Logo (Center) -->
+<div class="flex-shrink-0 flex items-center justify-center">
+<a class="text-2xl font-semibold tracking-tight text-primary" href="#">
+                        Bella Glow<span class="text-[#171212] dark:text-white font-light">.</span>
+</a>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center justify-end gap-6 flex-1">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Collections</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Journal</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button aria-label="Account" class="p-2 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">person</span>
+</button>
+<button aria-label="Search" class="p-2 hover:text-primary transition-colors lg:hidden">
+<span class="material-symbols-outlined text-[22px]">search</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Layout -->
+<div class="max-w-360 mx-auto flex min-h-screen">
+<!-- Sidebar Navigation (Desktop) -->
+<aside class="hidden lg:block w-64 flex-shrink-0 sticky top-20 h-[calc(100vh-5rem)] overflow-y-auto no-scrollbar py-10 pl-8 pr-4">
+<div class="space-y-10">
+<!-- Categories -->
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold mb-6">Shop by Category</h3>
+<ul class="space-y-4">
+<li>
+<a class="flex items-center justify-between group" href="#">
+<span class="text-base text-gray-900 dark:text-gray-100 font-medium group-hover:text-primary transition-colors">All Products</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</a>
+</li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Face</a></li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Lips</a></li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Eyes</a></li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Cheeks</a></li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Skincare</a></li>
+<li><a class="block text-base text-gray-600 dark:text-gray-400 hover:text-primary transition-colors" href="#">Tools &amp; Brushes</a></li>
+</ul>
+</div>
+<!-- Filters -->
+<div>
+<h3 class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold mb-6">Refine By</h3>
+<div class="mb-6">
+<h4 class="text-sm font-medium mb-3">Finish</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Matte</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Dewy</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/20 transition-all cursor-pointer" type="checkbox"/>
+<span class="text-sm text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors">Satin</span>
+</label>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-medium mb-3">Price Range</h4>
+<div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+<span>$0</span>
+<div class="h-px bg-gray-300 w-8"></div>
+<span>$200+</span>
+</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- Product Grid Area -->
+<main class="flex-1 px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+<!-- Breadcrumb / Header mobile -->
+<div class="flex items-center justify-between mb-8">
+<h1 class="text-3xl lg:text-4xl font-normal tracking-tight">All Products <span class="text-lg text-gray-400 font-light ml-2 align-top">42</span></h1>
+<div class="flex items-center gap-2">
+<span class="text-sm text-gray-500 mr-2">Sort by:</span>
+<select class="bg-transparent border-none text-sm font-medium text-gray-900 dark:text-white focus:ring-0 cursor-pointer pr-8">
+<option>Recommended</option>
+<option>Newest</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<!-- Mobile Categories (Horizontal Scroll) -->
+<div class="lg:hidden mb-8 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+<div class="flex gap-3">
+<button class="px-5 py-2 bg-[#171212] dark:bg-white text-white dark:text-[#171212] rounded-full text-sm whitespace-nowrap">All</button>
+<button class="px-5 py-2 bg-white dark:bg-[#332224] border border-[#e6e0e0] dark:border-[#4a3b3d] text-[#171212] dark:text-white rounded-full text-sm whitespace-nowrap">Face</button>
+<button class="px-5 py-2 bg-white dark:bg-[#332224] border border-[#e6e0e0] dark:border-[#4a3b3d] text-[#171212] dark:text-white rounded-full text-sm whitespace-nowrap">Lips</button>
+<button class="px-5 py-2 bg-white dark:bg-[#332224] border border-[#e6e0e0] dark:border-[#4a3b3d] text-[#171212] dark:text-white rounded-full text-sm whitespace-nowrap">Eyes</button>
+<button class="px-5 py-2 bg-white dark:bg-[#332224] border border-[#e6e0e0] dark:border-[#4a3b3d] text-[#171212] dark:text-white rounded-full text-sm whitespace-nowrap">Skincare</button>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-y-12 gap-x-8">
+<!-- Product 1 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<!-- Image placeholder: Luxury Foundation Bottle -->
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Elegant glass foundation bottle with pump on minimal background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB3nCyRTx5DQ-xIkSnj432yM2yP2Jm3Awr8SjYd1Wt8XHdxjmfbXjOqh8xKU5iwfR2xhqUFybleh1DlZ7uBrRe0_rHK6Gkg0wqDivjfPTNAVRpl8BRTzadxYtca1eL42XyBSMzGejkf0VCtNpoWsbSNZzaGTswFJAWYmljf01eOSRBP42Fc9loZ0TAC3DAEdCKwU-zi6E9XyWce-J9Loz6xlTFQosvHHuQalP-AAxPahTT-xJrndks11_U67NhH0gLowNYyzZu0J9JC');"></div>
+</div>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-3 py-1 bg-white/90 dark:bg-black/60 backdrop-blur text-[10px] uppercase tracking-widest font-bold text-primary rounded-sm">Best Seller</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Luminous Silk Foundation</h3>
+<span class="text-lg font-medium text-primary">$64.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Hydrating coverage for a dewy finish</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Red velvet lipstick tube open and tilted" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDiyRnS3k92BFOuTvDfgyvFX0gcB0XViIK-HcGLc403tvu-ANKPBZn_q8qWimdBTx7x74Vkc53Qtdvm1JJBBBlgupZx6sBQWlLJRr3N2vAumwp2srMjcBL9dt0tyJKNwWRTUH6k6qLU6LGRhQUX7xLWFAGjBufXv6eCnstFSK_9EQ_WP21WMqaBviDpb-30TelucQYxjSRnHN3qsIiBCpXxOu2iObxtpfsyvkZpN9fcGz3lVxXSvLDIlihk_YbaiByYAmoYjZQGA_9T');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Velvet Matte Lipstick</h3>
+<span class="text-lg font-medium text-primary">$38.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Long-lasting bold color in Rouge</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Clear glass serum bottle with dropper containing gold liquid" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmIqzCh-ZN9FMdtQAYL_SGjnyXEdFtMsZPWL7nen38IUEzCf1eNdLfoLw-mg3patmhxctYcA9efYZaj6sJgrKYHcQgbDQZFeo0AqzjVsHq2gWvlpzi--gUSYBWufFr_ECRkWfbv7uNBQTOHgNKA7SstXLNMW-nxnXhoN9rfaLv0WBdzNtDFVWISeCI19YG3MlcbAM09vcjukYdC7rTN3nPYxP9PVpvBE0C3t00e1FgWsmawaKB2pA7APhD7ku-0qzBZP4HQY5euxG4');"></div>
+</div>
+<div class="absolute top-4 left-4 z-20">
+<span class="px-3 py-1 bg-white/90 dark:bg-black/60 backdrop-blur text-[10px] uppercase tracking-widest font-bold text-[#171212] dark:text-white rounded-sm">New</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Radiance Serum</h3>
+<span class="text-lg font-medium text-primary">$85.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Deep hydration for glowing skin</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Powder blush compact open showing pink pressed powder" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgzJekRhMmqS23DpngPGAWZpe34Wjeowsijff9zM5XmS96LIlpRtIkLy_Q6ekGo0m94-VVHleAGkMRTvc232UnNpVdIZ08Cd-56Xiu0ej6kmLPxnpBsL_vybGENrR1pXFrO4Zk8kB6J75qayqyRuQ0wegb-mM86QbSLiD_BWyXzeRpjIODJZNEQLDATSKs5ROJ27q1kTwOWFtPM9k8bKj3VYIgnaAXTQZry8Bb3oRcEg6UjZ4SIyRcyexiCkUMzhdWD1g668CkyeYj');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Rosy Cheek Blush</h3>
+<span class="text-lg font-medium text-primary">$42.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Natural flush of buildable color</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 5 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Black mascara tube with wand applicator showing bristles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBie3gTy1wcZATZDIp8U4M_-onLy7ct6aHLa_c6qJ4e34EDQr0E6qGNI7PzAy_8SidQpT0JIcKEXWaYox9rk6YR1mmIh1Pdq6w9nHdl5ySsSenp65IbywhNlGd-bVIeAqWsgI3nxRFthpVYXo_B8l8yvRyGaP-xhbTSiZGLUF8NL6NN9sarbGkmlT5kjhv9JxAXimmk8CLEzklZs_0RqxqNOB7RpytbpjjMGDgc4ECmqiz4nod_mEz-9G7_8vP59HVySBptGqlmyLwc');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Volumizing Mascara</h3>
+<span class="text-lg font-medium text-primary">$32.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Defined lashes with zero clumps</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 6 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Set of professional makeup brushes with wooden handles" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEUhXBLhpBfxtooWMewnH2MWa-atXhzWBlVif0uLGv5lr1PJdRyBWk9F6QITDllx94xjY_h3RYLbqjrvUDw2wicQowkWru4OMfmAS5KCDLsAVpfLZnFXxM96bHfHeJ_sdN5LK_Hg5nO0WfRqrzEbGZAUwTdnJ_BMzVKNj-yXqOIYJGj0H0u51HED2gIzjPuY1dMys_rin8hzk_5M9kQ1tpFs34W2-3YQeeeI2xmR3CStnsFYEeX6pONpHy5X0vXWiUw7HcI-0KuUbz');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Precision Brush Set</h3>
+<span class="text-lg font-medium text-primary">$55.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Artisan-crafted professional tools</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 7 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Glass jar of night cream with lid beside it" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDwZCQHJ2lPmXpbjceHvojCwSF2tfXeSVM2Rwip-fIMc7kSJMAMNR_Od7CdUNtxj4-qWe-B9uLcTwFevMdob7wahQJ-JUNzyY0Vqa1jLK5s5940mYqZWjQDKEHk1sT4zid1bAG4pBKA0wRcimGgObtkL4coaJcJECYVOAa7eeUOrZ5YMy0BKAtJECnKwoV2Iq6VHuHjD_LHQVCsU_MDqeyR895-xQGQND6YRPS9E1O5-uimb4Dh6-bGqfAQ5SV_sjOMI-ib9OP3wNzD');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Midnight Repair Cream</h3>
+<span class="text-lg font-medium text-primary">$92.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Restorative overnight treatment</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+<!-- Product 8 (Sold Out) -->
+<div class="group flex flex-col gap-4 opacity-75">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-not-allowed">
+<div class="absolute inset-0 bg-white/40 dark:bg-black/40 z-20 flex items-center justify-center">
+<span class="px-4 py-2 bg-[#171212] text-white text-xs uppercase tracking-widest font-bold">Sold Out</span>
+</div>
+<div class="absolute inset-0 p-8 flex items-center justify-center">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat grayscale" data-alt="Elegant eyeshadow palette with 4 neutral colors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXUGfr8_CnYlthZIibvavcaoe58aH0jxm_r-BRP7L-4jCPSB1qeG2vvuuIat3r5F_cBAsVLvAdHXaUCQeBHZcaUDHhyRChBpZe12ocphStslBdYB_oOA8l_OcH4nYUBL6OO_nqXdUZ_gAIjwjw4j4cyo--i3L_RaF64stpCaoscqoVrgC800BaEEFvPnPC9E6J9Hnd9voHVCweH_8YcGulqLh54wjtLqkwNHOX3OOboNWWU2QCy4DZAgaxJ70vHd7Zja9HSFxeMgrk');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-gray-500 dark:text-gray-400">Nude Eye Palette</h3>
+<span class="text-lg font-medium text-gray-400">$48.00</span>
+</div>
+<p class="text-sm text-gray-400 font-light tracking-wide">Everyday essentials</p>
+</div>
+</div>
+<!-- Product 9 -->
+<div class="group flex flex-col gap-4">
+<div class="relative w-full aspect-[4/5] bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
+<div class="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">
+<div class="w-full h-full bg-contain bg-center bg-no-repeat" data-alt="Liquid eyeliner pen with fine tip" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRLBt0FPoWCPV7A2Yx-hpzrCSsdc3hqv45I2r0VY8vqO9RUAXo18l794hIJuMROFpweXBczF-bya_bzehox899YNIfCL7uwEsTwRQCmhquHfGPAKRh8JkK5GKuKGhuZh3NfYwNyYWLjWQXEvgB_2JBBMA5lFKntdNDCzMyerGr9n6E3cAbcRe-KTMqgG81WtCcToUVFILfLpeHCSMaKnQnxW0Sx98DalpBVfn8FUeywEATm9n4PVSvjBv9qdgS6JIwjUaL7pfY48O8');"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-start">
+<h3 class="text-xl font-medium text-[#171212] dark:text-white group-hover:text-primary transition-colors cursor-pointer">Ink Liner</h3>
+<span class="text-lg font-medium text-primary">$28.00</span>
+</div>
+<p class="text-sm text-gray-500 dark:text-gray-400 font-light tracking-wide">Waterproof precision tip</p>
+<button class="mt-4 w-full py-3 border border-[#171212]/10 dark:border-white/20 rounded text-sm font-semibold uppercase tracking-widest hover:bg-[#171212] hover:text-white dark:hover:bg-white dark:hover:text-[#171212] transition-all opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">View Details</button>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="mt-24 flex items-center justify-center gap-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-400">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-[#171212] text-white dark:bg-white dark:text-[#171212] text-sm font-medium">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300 text-sm font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300 text-sm font-medium">3</button>
+<span class="text-gray-400">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-400">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-white dark:bg-[#1a0f10] border-t border-[#e6e0e0] dark:border-[#3a2a2c] mt-20">
+<div class="max-w-[1440px] mx-auto px-6 py-16 lg:px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<a class="text-xl font-semibold tracking-tight text-primary block mb-6" href="#">
+                        Bella Glow<span class="text-[#171212] dark:text-white font-light">.</span>
+</a>
+<p class="text-sm text-gray-500 leading-relaxed mb-6">Defining luxury through clean, high-performance beauty essentials designed for the modern muse.</p>
+<div class="flex gap-4">
+<a class="text-gray-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">star</span></a> <!-- Using stars as placeholders for social icons if needed or just simple shapes -->
+<!-- The prompt requested specific social icons replacement, but I only have material symbols. I'll use text or generic shapes if icons aren't available, but Material Symbols has some brand logos or I can use generic 'public' icons. Actually, the user asked to replace icons with Material Symbols. I will use generic social media like icons from Material Symbols if available, or just omit/use placeholders. I'll use generic link icons. -->
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-gray-400 hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Shop</h4>
+<ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">New Arrivals</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Best Sellers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sets &amp; Gifts</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sale</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Company</h4>
+<ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-sm font-bold uppercase tracking-widest mb-6">Newsletter</h4>
+<p class="text-sm text-gray-500 mb-4">Join our list for exclusive drops and beauty tips.</p>
+<div class="flex border-b border-gray-300 dark:border-gray-700 pb-2">
+<input class="bg-transparent w-full text-sm outline-none placeholder:text-gray-400" placeholder="Your email address" type="email"/>
+<button class="text-primary text-sm font-semibold uppercase tracking-wider">Join</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center mt-16 pt-8 border-t border-gray-100 dark:border-gray-800">
+<p class="text-xs text-gray-400">© 2024 Bella Glow Cosmetics. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="text-xs text-gray-400 hover:text-primary" href="#">Privacy Policy</a>
+<a class="text-xs text-gray-400 hover:text-primary" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
