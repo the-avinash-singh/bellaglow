@@ -9,11 +9,11 @@ import Link from "next/link";
 
 const Links = [
   {
-    heading: "Shop",
+    heading: "Explore",
     subLink: [
       {
-        cat: "Face",
-        route: "/products/face",
+        cat: "Brands",
+        route: "/#brands",
       },
       {
         cat: "Fragrance",
@@ -23,17 +23,6 @@ const Links = [
         cat: "Skincare",
         route: "/products/skincare",
       },
-      {
-        cat: "Cheek",
-        route: "/products/cheek",
-      },
-    ],
-  },
-  {
-    heading: "About",
-    subLink: [
-      { cat: "Our Story", route: "/our-story" },
-      { cat: "Our Effort", route: "/our-effort" },
     ],
   },
   {
@@ -66,32 +55,9 @@ function Footer() {
                 </span>
               </div>
               <p className="text-sm text-text-muted dark:text-gray-400 leading-relaxed">
-                Luxury skincare rooted in nature, perfected by science. Designed
-                for those who seek the light within.
+                The ultimate destination for luxury beauty connoisseurs.
+                Curating the world's most effective and exclusive brands.
               </p>
-              <div className="flex gap-4 mt-2">
-                <Link
-                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
-                  href="https://www.instagram.com/bellaglowcosmetics2025" target="_blank"
-                >
-                  {/* <!-- Instagram icon simulated with camera --> */}
-                  <FontAwesomeIcon icon={faInstagram} style={{ height: 20 }} />
-                </Link>
-                <Link
-                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
-                  href="https://t.me/+aITSPbOSrtE5OWRl" target="_blank"
-                >
-                  {/* <!-- Facebook icon simulated with public --> */}
-                  <FontAwesomeIcon icon={faTelegram} style={{ height: 20 }} />
-                </Link>
-                <Link
-                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
-                  href={`https://wa.me/8484006409?text=Hello I am a visiter on Bellaglow.com`} target="_blank"
-                >
-                  {/* <!-- Pinterest icon simulated with push_pin --> */}
-                  <FontAwesomeIcon icon={faWhatsapp} style={{ height: 20 }} />
-                </Link>
-              </div>
             </div>
             {/* <!-- Links Column 1 --> */}
             {Links.map((link, index) => (
@@ -113,6 +79,37 @@ function Footer() {
                 </ul>
               </div>
             ))}
+            <div>
+              <h4 className="font-bold text-text-main dark:text-white mb-6 uppercase text-sm tracking-wider">
+                Stay connected
+              </h4>
+              <div className="flex gap-4 mt-2">
+                <Link
+                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
+                  href="https://www.instagram.com/bellaglowcosmetics2025"
+                  target="_blank"
+                >
+                  {/* <!-- Instagram icon simulated with camera --> */}
+                  <FontAwesomeIcon icon={faInstagram} style={{ height: 20 }} />
+                </Link>
+                <Link
+                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
+                  href="https://t.me/+aITSPbOSrtE5OWRl"
+                  target="_blank"
+                >
+                  {/* <!-- Facebook icon simulated with public --> */}
+                  <FontAwesomeIcon icon={faTelegram} style={{ height: 20 }} />
+                </Link>
+                <Link
+                  className="w-10 h-10 rounded-full bg-background-light dark:bg-white/5 flex items-center justify-center text-text-main dark:text-white hover:bg-primary hover:text-white transition-all duration-300"
+                  href={`https://wa.me/8484006409?text=Hello I am a visiter on Bellaglow.com`}
+                  target="_blank"
+                >
+                  {/* <!-- Pinterest icon simulated with push_pin --> */}
+                  <FontAwesomeIcon icon={faWhatsapp} style={{ height: 20 }} />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </footer>

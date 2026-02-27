@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 import Product1, { Products } from "../Components/Product1";
 
 const products: Products[] = [
@@ -41,13 +41,8 @@ function ProductGrid() {
     <>
       <section className="py-20 md:py-32 px-4 bg-background-light dark:bg-background-dark">
         <div className="max-w-240 mx-auto text-center space-y-4">
-          <h2
-            className={`text-primary text-sm font-bold tracking-[0.2em] uppercase font-display`}
-          >
-            Best Sellers
-          </h2>
           <h3 className="text-text-main dark:text-white text-3xl md:text-5xl font-bold leading-tight font-display">
-            Curated Luminosity
+            Our Curated Selection
           </h3>
           <div className="w-16 h-0.5 bg-gold-accent mx-auto mt-6"></div>
         </div>
@@ -67,9 +62,9 @@ function ProductGrid() {
             ))}
           </div>
           <div className="mt-16 flex justify-center">
-            <button className="group flex items-center gap-2 text-text-main dark:text-white font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors font-display">
+            <Link className="group flex items-center gap-2 text-text-main dark:text-white font-bold text-sm tracking-widest uppercase hover:text-primary transition-colors font-display" href={"/products/all"}>
               View All Products
-            </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -12,10 +12,7 @@ const Navigationbar = () => {
       name:"Fragrance",
       route:"/products/fragrance"
     },
-    {
-      name:"Tools & Brushes",
-      route:"/products/tools"
-    },
+   
   ]
   return (
     <nav className='sticky top-0 z-50 flex items-center justify-between border-b border-[#e5dcde] bg-background-light/90 px-6 py-4 backdrop-blur-md dark:bg-background-dark/90 dark:border-white/10 lg:px-12'>

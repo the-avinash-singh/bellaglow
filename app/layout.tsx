@@ -21,10 +21,7 @@ export const metadata: Metadata = {
     siteName:"Bellaglow",
     url:"www.bellaglow.com",
     description:"Buy your costmatics at lowest price possible",
-    images:[
-      {url:"https://bellaglo.netlify.app/web-app-manifest-192x192", alt:"bellaglow logo"},
-      {url:"https://bellaglo.netlify.app/web-app-manifest-512x512"}
-    ]
+    images:"https://bellaglo.netlify.app/web-app-manifest-512x512",
   }
 };
 
