@@ -1,4 +1,6 @@
+"use client"
 import Image from 'next/image'
+import { useRouter } from 'next/navigation';
 
 export interface Product2Type{
     tag?:string;
@@ -6,12 +8,15 @@ export interface Product2Type{
     name:string;
     price:number;
     desc:string;
+    route:string;
 }
 
-function Product2({tag, name, img, price, desc}:Product2Type) {
+function Product2({tag, name, img, price, desc,route}:Product2Type) {
+
+  const router=useRouter()
   return (
     <>
-<div className="group flex flex-col gap-4">
+<div className="group flex flex-col gap-4" onClick={()=>router.push(route)}>
 <div className="relative w-full aspect-4/5 bg-[#FDF8F4] dark:bg-[#2A1E20] rounded-lg overflow-hidden cursor-pointer">
 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-300 z-10"></div>
 <div className="absolute inset-0 p-8 flex items-center justify-center transition-transform duration-700 ease-out group-hover:scale-105">

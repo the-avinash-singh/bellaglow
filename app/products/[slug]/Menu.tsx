@@ -56,7 +56,7 @@ function Menu() {
           </div>
         </div>
       </aside>
-      <div className="lg:hidden mb-8 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+      <div className="lg:hidden mb-8 mt-4 overflow-x-auto no-scrollbar pb-2 px-4">
         <div className="flex gap-3">
           {categories.map((category, index) => (
             <button

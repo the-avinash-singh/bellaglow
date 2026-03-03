@@ -16,7 +16,7 @@ function Product1({image,productName,productUse,price,route}:Products) {
   return (
     <div>
       <div className="group flex flex-col gap-4 cursor-pointer">
-        <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl">
+        <div className="relative w-full aspect-3/4 overflow-hidden rounded-2xl" onClick={()=>router.push(route)}>
           <Image
             width={200}
             height={400}
@@ -25,7 +25,7 @@ function Product1({image,productName,productUse,price,route}:Products) {
             src={image}
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500"></div>
-          <button className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-primary hover:text-white uppercase tracking-wider whitespace-nowrap" onClick={()=>router.push(route)}>
+          <button className="absolute bottom-4 left-1/2 -translate-x-1/2 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 bg-white text-black text-xs font-bold py-2.5 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-primary hover:text-white uppercase tracking-wider whitespace-nowrap" >
             Quick View
           </button>
         </div>
